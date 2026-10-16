@@ -1,3 +1,9 @@
+# Práctica: Instalación, configuración y securización de Apache en Ubuntu 24.04
+
+**Nombre:** [Tu Nombre Completo]
+**Curso:** Sistemas Microinformáticos y Redes (SMR) - Módulo: Aplicaciones Web
+**Fecha:** 16 de octubre de 2026
+
 # apache
 1. version de ubuntu:
 <img width="285" height="101" alt="imagen" src="https://github.com/user-attachments/assets/53d12344-7a4d-460f-b0c7-52362c2630e5" />
