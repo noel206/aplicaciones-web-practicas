@@ -109,3 +109,62 @@ Cambia Listen 80 por Listen 8080 y <VirtualHost *:80> por <VirtualHost *:8080>.
 **6.4. Cambiar el correo del administrador** (ServerAdmin en el fichero del sitio).
 
 <img width="945" height="331" alt="imagen" src="https://github.com/user-attachments/assets/d68cd06f-a734-4c36-8df9-08f9affd9470" />
+
+**6.5. Personalizar una página de error**
+<img width="960" height="222" alt="Captura de 2026-10-14 09-42-18" src="https://github.com/user-attachments/assets/7a925d58-e4ab-4ab8-bd47-7e49dd92e153" />
+
+
+**Apartado 7. Módulos de Apache**
+
+**¿Qué ocurre si desactivas un módulo del que depende otro?**
+
+Si desactivas un módulo base que está siendo utilizado por otro módulo activo o por la configuración de algún sitio web, Apache fallará al intentar reiniciar o recargar el servicio.El servidor web no arrancará correctamente hasta que vuelvas a activar el módulo necesario o desactives también el módulo/configuración que depende de él.
+
+**Apartado 8. Varios sitios en un mismo servidor (Virtual Hosts)**
+
+**8.1. Crear los directorios y páginas**
+<img width="606" height="124" alt="Captura de 2026-10-14 10-15-08" src="https://github.com/user-attachments/assets/7d43bcd7-1588-4b95-8f5a-cd5e1becb105" />
+
+**8.2. Crear los ficheros de configuración**
+<img width="804" height="285" alt="Captura de 2026-10-14 10-17-57" src="https://github.com/user-attachments/assets/2389a4de-2b5b-46f1-98dd-e321ed7a9e05" />
+
+**8.3. Activar los sitios y desactivar el de por defecto**
+<img width="724" height="500" alt="Captura de 2026-10-14 10-19-54" src="https://github.com/user-attachments/assets/2a359176-8323-469d-ba7a-a2c87d43351e" />
+
+**8.4. Resolución de nombres.**
+<img width="605" height="245" alt="Captura de 2026-10-14 10-22-17" src="https://github.com/user-attachments/assets/cdcbdeef-2694-4364-b903-c60348c974ad" />
+
+**8.5. Pruebas**
+<img width="334" height="89" alt="Captura de 2026-10-14 10-24-15" src="https://github.com/user-attachments/assets/8a052fb5-c885-4fc3-aca7-961720fde35a" />
+
+**¿Qué diferencia hay entre virtual hosts basados en nombre y basados en IP? ¿Cuál has usado?**
+
+**basados en nombre:** permiten alojar varias paginas web en una misma direccion ip y Apache idenifica que sitio debe mostrar segun el nombre del dominio solicitado 
+
+**basados en ip:** utilizan direcciones ip diferentes para distingir los siios web
+
+
+**Apartado 9. Permisos y propietarios**
+
+**Apache se ejecuta con el usuario www-data. Comprueba:**
+<img width="951" height="245" alt="Captura de 2026-10-14 10-31-35" src="https://github.com/user-attachments/assets/4d928264-b80f-4b7c-9d21-a394d7cfe058" />
+
+**Aplica una política de permisos razonable:**
+<img width="951" height="394" alt="Captura de 2026-10-14 10-35-44" src="https://github.com/user-attachments/assets/03e67c78-33c2-49d8-9249-0f4a2078bd7d" />
+
+**Prueba qué ocurre al poner chmod 000 a index.html (error 403) y consulta el error.log. Después restaura los permisos.**
+<img width="530" height="68" alt="Captura de 2026-10-14 10-33-24" src="https://github.com/user-attachments/assets/8e83b593-d367-49a6-a053-7c85823cfe1b" />
+
+**Qué significan 755 y 644**
+**755 :** El propietario (www-data) tiene permisos para leer, escribir y ejecutar/entrar al directorio (7). El grupo y los demás usuarios solo tienen permisos para leer y ejecutar/entrar (5 y 5).
+**644 :** El propietario puede leer y escribir/modificar el archivo (6). El grupo y los demás usuarios solo tienen permisos de lectura (4 y 4).
+
+**Por qué nunca se deben usar permisos 777 en un servidor web.Por qué nunca se deben usar permisos 777 en un servidor web**
+Si le damos 777 a nuestra web, cualquier usuario malintencionado que logre subir un archivo al servidor o cualquier otro proceso del sistema podría borrar, modificar nuestra página web o ejecutar código malicioso (virus/scripts) sin ningún tipo de restricción.
+
+**Por qué el contenido web no debe pertenecer a root ni ser escribible por todos.**
+Si el contenido pertenece a root y Apache funciona como root, cualquier vulnerabilidad en la página web le daría al atacante control total y absoluto sobre todo el servidor operativo, no solo sobre la web.
+
+
+**CONCLUSION**
+He realizado esta práctica con el objetivo de aprender a administrar y proteger un servidor web en un entorno real. Para ello, he instalado Apache en Ubuntu, he configurado varios sitios web para que funcionen simultáneamente usando Virtual Hosts, y he aplicado políticas estrictas de permisos y seguridad, lo que me ha permitido entender de forma práctica cómo se publican y aseguran las páginas web en internet.
