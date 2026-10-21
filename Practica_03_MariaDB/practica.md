@@ -55,3 +55,6 @@ Es el "puente" o conector que permite que el lenguaje PHP pueda comunicarse con 
 **Apartado 7. Comprobación final**
 
 <img width="579" height="153" alt="imagen" src="https://github.com/user-attachments/assets/040e486d-2109-4ebd-9cf9-08c7b45665ad" />
+
+**Conclusion**
+En esta práctica se ha completado la configuración del entorno LAMP en Ubuntu 24.04 instalando MariaDB y vinculándolo con PHP. Se ha aprendido a gestionar el servicio mediante systemctl y a configurar el módulo php-mysql, dejando el servidor completamente operativo y preparado para alojar aplicaciones web dinámicas y CMS como WordPress.
