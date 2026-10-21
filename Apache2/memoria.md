@@ -1,6 +1,6 @@
 # Práctica: Instalación, configuración y securización de Apache en Ubuntu 24.04
 
-**Nombre:** [Tu Nombre Completo]
+**Nombre:** Noel Hidalgo Ortí.
 **Curso:** Sistemas Microinformáticos y Redes (SMR) - Módulo: Aplicaciones Web
 **Fecha:** 16 de octubre de 2026
 
